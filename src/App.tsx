@@ -798,7 +798,7 @@ function ContactSection() {
 
           <div className="flex flex-col gap-4">
             {[
-              { icon: "⚡", title: "Resposta em até 6h", sub: "Durante o horário comercial" },
+              { icon: "⚡", title: "Resposta em até 24h", sub: "Durante o horário comercial" },
               { icon: "💬", title: "Contato direto", sub: "Sem formulários intermináveis" },
               { icon: "🎯", title: "Orçamento personalizado", sub: "Baseado na sua necessidade real" },
             ].map(({ icon, title, sub }) => (
