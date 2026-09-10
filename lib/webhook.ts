@@ -1,4 +1,4 @@
-import type { LeadInput } from "./validation";
+import type { LeadInput } from "./validation.js";
 
 /**
  * Dispara o payload do lead para o Make.com, que fica responsável
