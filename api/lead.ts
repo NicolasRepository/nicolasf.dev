@@ -1,11 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { leadSchema, formatZodErrors } from "../lib/validation";
-import { checkRateLimit } from "../lib/redis";
-import { verifyTurnstileToken } from "../lib/turnstile";
-import { insertLead } from "../lib/db";
-import { sendMakeWebhook } from "../lib/webhook";
-import { sendLeadNotificationEmail } from "../lib/email";
-import { applyCors } from "../lib/cors";
+import { leadSchema, formatZodErrors } from "../lib/validation.js";
+import { checkRateLimit } from "../lib/redis.js";
+import { verifyTurnstileToken } from "../lib/turnstile.js";
+import { insertLead } from "../lib/db.js";
+import { sendMakeWebhook } from "../lib/webhook.js";
+import { sendLeadNotificationEmail } from "../lib/email.js";
+import { applyCors } from "../lib/cors.js";
 
 /**
  * POST /api/lead
