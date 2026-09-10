@@ -1,5 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-import type { LeadInput } from "./validation";
+import type { LeadInput } from "./validation.js";
 
 /**
  * Cliente Neon (driver serverless via HTTP, ideal para Vercel Functions).
