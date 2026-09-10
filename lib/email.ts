@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import type { LeadInput } from "./validation";
+import type { LeadInput } from "./validation.js";
 
 /**
  * Dispara um e-mail de notificação (via Resend) sempre que um novo
