@@ -753,11 +753,8 @@ function ContactSection() {
       }
 
       // Sucesso: lead já foi salvo no banco / disparado para as integrações no backend.
-      const msg = encodeURIComponent(
-        `Olá! Vim pelo site.\n\nNome: ${form.nome}\nWhatsApp: ${form.whatsapp}\nRamo: ${form.ramo}\nTipo: ${form.tipo === "empresa" ? "Empresa" : form.tipo === "agencia" ? "Agência" : "Outros"}`
-      );
-      window.open(`https://wa.me/5511999999999?text=${msg}`, "_blank");
       setSent(true);
+      setForm({ nome: "", whatsapp: "", email: "", ramo: "", tipo: "empresa" });
       setTimeout(() => setSent(false), 4000);
     } catch (err) {
       console.error(err);
@@ -796,13 +793,13 @@ function ContactSection() {
             </h2>
           </div>
           <p style={{ color: "#A7A7A3", lineHeight: 1.8, marginBottom: 32 }}>
-            Preencha o formulário e em poucos segundos você será direcionado ao WhatsApp para conversarmos sobre o seu projeto.
+            Preencha o formulário e em poucos segundos entrarei em contato com você para conversarmos sobre o seu projeto.
           </p>
 
           <div className="flex flex-col gap-4">
             {[
               { icon: "⚡", title: "Resposta em até 6h", sub: "Durante o horário comercial" },
-              { icon: "💬", title: "WhatsApp direto", sub: "Sem formulários intermináveis" },
+              { icon: "💬", title: "Contato direto", sub: "Sem formulários intermináveis" },
               { icon: "🎯", title: "Orçamento personalizado", sub: "Baseado na sua necessidade real" },
             ].map(({ icon, title, sub }) => (
               <div key={title} className="flex items-center gap-4">
@@ -950,7 +947,7 @@ function ContactSection() {
               onMouseEnter={(e) => { if (!sent && !loading) { e.currentTarget.style.boxShadow = "0 0 40px rgba(34,197,94,0.6)"; e.currentTarget.style.transform = "translateY(-1px)"; } }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 0 24px rgba(34,197,94,0.35)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
-              {loading ? "Enviando..." : sent ? "✓ Redirecionando para o WhatsApp..." : "Enviar e Falar no WhatsApp 💬"}
+              {loading ? "Enviando..." : sent ? "✓ Enviado com sucesso!" : "Enviar Mensagem 💬"}
             </button>
           </form>
         </div>
