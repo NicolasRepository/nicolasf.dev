@@ -513,7 +513,7 @@ function PricingSection() {
 }
 
 const CLIENT_PROJECTS = [
-  { title: "Agência Guia: Captação de Lead", tag: "Marketing", img: "/images/agenciaGuia.png", desc: "Landing page de alta conversão com formulário inteligente, validação de dados e automação de atendimento via WhatsApp."},
+  { title: "Agência Guia: Captação de Lead", tag: "Marketing", img: "/images/agenciaGuia.jpeg", desc: "Landing page de alta conversão com formulário inteligente, validação de dados e automação de atendimento via WhatsApp."},
 ];
 
 const PERSONAL_PROJECTS = [
