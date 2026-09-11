@@ -532,7 +532,7 @@ function PortfolioCard({ title, tag, img, desc, link, badgeColor }: { title: str
     : `https://images.unsplash.com/${img}?w=800&h=400&fit=crop&auto=format`;
 
   const textColor = badgeColor === "purple" ? "#7C3AED" : (badgeColor === "blue" ? "#3B82F6" : "#22C55E");
-  const bottomText = !link ? "Link indisponível" : badgeColor === "purple" ? "Visitar Projeto →" : "Ver no GitHub →";
+  const bottomText = !link ? "Link indisponível" : badgeColor === "purple" ? "Visitar Projeto →" : "Visitar Projeto →";
 
   return (
     <div
