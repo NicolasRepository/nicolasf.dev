@@ -519,11 +519,11 @@ const CLIENT_PROJECTS = [
 const PERSONAL_PROJECTS = [
   { title: "Cruzado: Advinhar Palavras Cruzadas", tag: "Lazer", img: "/images/cruzado.png", desc: "Duas ou mais palavras são sorteadas e cruzadas e o jogador deve advinhar, inspirado em Termo.", link: "https://nicolasfaria-unifesp.github.io/cruzado/"},
   { title: "Jogos de Alfabetização", tag: "Educação", img: "/images/jogoAlfabetizacao.png", desc: "Crianças brincam com músicas que conhecem, auxiliando na alfabetização.", link:"https://nicolasfaria-unifesp.github.io/jogos-alfabetizacao/"},
+  { title: "Very Very Tools: Hub de ferramentas diversas.", tag: "Utilitários", img: "/images/favicon.svg", desc: "Plataforma que hospeda diversas ferramentas client-sided, sem login, rápido e fácil.", link: "https://www.veryverytools.com"},
 ];
 const ACADEMIC_PROJECTS = [
   { title: "Athen: Plataforma de Estudos Gameficada", tag: "Educação", img: "/images/athen.png", desc: "Plataforma de cursos criados pela comunidade, para a comunidade, inspirado em Duolingo e Kahoot." },
   { title: "Números Primos: Onde a matemática encontra a criptografia.", tag: "Educação", img: "/images/numpri.png", desc: "Plataforma de conteúdos sobre números primos e criptografias, com informações e jogos.", link: "https://l.instagram.com/?u=https%3A%2F%2Fnumeros-primos-theta.vercel.app%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacelE5nuHyejfND43oB5D27fRzIiGby6FhcWTVnVsZtOYIJ8tZV117tUqQ2BQ_aem_al2_0kYO1qrj-f_ZMHEznA&e=AUDLVx_1ux-ZLi_0VH20jps_95yFJH3VTmtA39NVUYpuFX-bxhuQNCA4k78qAMQzvbXvxG3W0UT-onkSW-Kj6VAAkBiELE1mP-7rzmj9LLCii1IPlEkaRk65NsVQDqEAFBdGAdo"},
-  { title: "Very Very Tools: Hub de ferramentas diversas.", tag: "Utilitários", img: "/images/favicon.svg", desc: "Plataforma que hospeda diversas ferramentas client-sided, sem login, rápido e fácil.", link: "https://www.veryverytools.com"},
 ];
 
 function PortfolioCard({ title, tag, img, desc, link, badgeColor }: { title: string; tag: string; img: string; desc: string; link?: string; badgeColor: "purple" | "green" | "blue" }) {
