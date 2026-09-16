@@ -165,7 +165,7 @@ function HeroSection() {
           </div>
 
           <div className="flex flex-wrap gap-6 mt-10">
-            {[["Entrega", "em 5 dias úteis"], ["Suporte", "dentro de 3 dias"], ["Atendimento", "personalizado por cliente"]].map(([num, label]) => (
+            {[["Entrega", "em até 10 dias úteis"], ["Suporte", "dentro de 3 dias"], ["Atendimento", "personalizado por cliente"]].map(([num, label]) => (
               <div key={label}>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "1.6rem", color: "#7C3AED" }}>{num}</div>
                 <div style={{ color: "#A7A7A3", fontSize: "0.78rem", marginTop: 2 }}>{label}</div>
@@ -403,7 +403,7 @@ const agenciasFeatures = [
 function PricingSection() {
   const modules = [
     { name: "Notificação WhatsApp / E-mail", price: "+R$ 500", icon: "💬" },
-    { name: "Entrega Express em 72h", price: "+R$ 500", icon: "⚡" },
+    { name: "Entrega Express em 5 dias úteis", price: "+R$ 500", icon: "⚡" },
     { name: "Rastreamento Meta / Google Ads", price: "+R$ 250", icon: "📊" },
     { name: "Páginas Extras", price: "+R$ 250 / cada", icon: "📄" },
   ];
