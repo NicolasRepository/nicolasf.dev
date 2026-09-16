@@ -517,7 +517,7 @@ const CLIENT_PROJECTS = [
 ];
 
 const PERSONAL_PROJECTS = [
-  { title: "Cruzado: Advinhar Palavras Cruzadas", tag: "Lazer", img: "/images/cruzado.png", desc: "Duas ou mais palavras são sorteadas e cruzadas e o jogador deve advinhar, inspirado em Termo.", link: "https://nicolasfaria-unifesp.github.io/cruzado/"},
+  { title: "Very Very Games: Hub de jogos diversos", tag: "Lazer", img: "/images/vvg.jpg", desc: "Biblioteca de vários jogos feitos por mim.", link: "https://nicolasrepository.github.io/veryverygames/"},
   { title: "Jogos de Alfabetização", tag: "Educação", img: "/images/jogoAlfabetizacao.png", desc: "Crianças brincam com músicas que conhecem, auxiliando na alfabetização.", link:"https://nicolasfaria-unifesp.github.io/jogos-alfabetizacao/"},
   { title: "Very Very Tools: Hub de ferramentas diversas.", tag: "Utilitários", img: "/images/favicon.svg", desc: "Plataforma que hospeda diversas ferramentas client-sided, sem login, rápido e fácil.", link: "https://www.veryverytools.com"},
 ];
