@@ -142,7 +142,7 @@ const translations = {
       ],
       personalProjects: [
         { title: "Very Very Games: Hub de jogos diversos", tag: "Lazer", img: "/images/vvg.jpg", desc: "Biblioteca de vários jogos feitos por mim.", link: "https://nicolasrepository.github.io/veryverygames/" },
-        { title: "Jogos de Alfabetização", tag: "Educação", img: "/images/jogoAlfabetizacao.png", desc: "Crianças brincam com músicas que conhecem, auxiliando na alfabetização.", link: "https://nicolasfaria-unifesp.github.io/jogos-alfabetizacao/" },
+        { title: "AprendePlay", tag: "Educação", img: "/images/aprendeplay.png", desc: "Jogos infantis para auxiliar na alfabetização.", link: "https://aprendeplay.vercel.app" },
         { title: "Very Very Tools: Hub de ferramentas diversas.", tag: "Utilitários", img: "/images/favicon.svg", desc: "Plataforma que hospeda diversas ferramentas client-sided, sem login, rápido e fácil.", link: "https://www.veryverytools.com" },
       ],
       academicProjects: [
