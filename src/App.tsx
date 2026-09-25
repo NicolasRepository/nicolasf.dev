@@ -299,7 +299,7 @@ const translations = {
       ],
       personalProjects: [
         { title: "Very Very Games: Game Hub", tag: "Leisure", img: "/images/vvg.jpg", desc: "A library of multiple games created by me.", link: "https://nicolasrepository.github.io/veryverygames/" },
-        { title: "Literacy Games", tag: "Education", img: "/images/jogoAlfabetizacao.png", desc: "Interactive game where children learn to read with familiar songs.", link: "https://nicolasfaria-unifesp.github.io/jogos-alfabetizacao/" },
+        { title: "AprendePlay", tag: "Education", img: "/images/aprendeplay.png", desc: "Children's games to aid in literacy learning.", link: "https://aprendeplay.vercel.app" },
         { title: "Very Very Tools: Client-side Utility Hub", tag: "Utilities", img: "/images/favicon.svg", desc: "Platform hosting various client-side web tools with no login needed.", link: "https://www.veryverytools.com" },
       ],
       academicProjects: [
