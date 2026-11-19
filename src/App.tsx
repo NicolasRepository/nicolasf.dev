@@ -30,7 +30,6 @@ const translations = {
       inicio: "Início",
       sobre: "Sobre",
       servicos: "Serviços",
-      precos: "Preços",
       portfolio: "Portfólio",
       contato: "Contato",
       cta: "Solicitar Orçamento",
@@ -96,38 +95,6 @@ const translations = {
         { icon: "🗄️", title: "Organização de Contatos", desc: "Dados preenchidos pelos clientes são salvos com segurança e disponibilizados no e-mail ou Google Sheets." },
       ],
     },
-    pricing: {
-      title: "Tabela de Valores",
-      subtitle: "Estrutura modular — você paga só pelo que realmente precisa.",
-      baseBadge: "Projeto Base",
-      baseSub: "Pagamento único — sem mensalidade escondida",
-      baseHeader: "// INCLUSO NO PROJETO BASE",
-      baseItems: [
-        "Interface web moderna e 100% responsiva",
-        "Design visual e prototipagem",
-        "Integração com banco de dados",
-        "Conexão com Google Planilhas",
-        "Formulários dinâmicos e coleta de dados",
-        "Hospedagem e publicação em nuvem",
-        "Configuração de domínio próprio",
-        "Otimização de velocidade",
-      ],
-      extraHeader: "// MÓDULOS ADICIONAIS",
-      modules: [
-        { name: "Notificação WhatsApp / E-mail", brl: 500, icon: "💬", suffix: "" },
-        { name: "Entrega Express em 5 dias úteis", brl: 500, icon: "⚡", suffix: "" },
-        { name: "Rastreamento Meta / Google Ads", brl: 250, icon: "📊", suffix: "" },
-        { name: "Páginas Extras", brl: 250, icon: "📄", suffix: " / cada" },
-      ],
-      supportBadge: "Assistência Técnica",
-      supportTitle: "Pós-entrega",
-      supportSub: "Suporte contínuo sem surpresas",
-      perMonth: "/mês",
-      monthlySub: "Plano mensal — cancele quando quiser",
-      perSemi: "/semestral",
-      savings: "💚 Economia de ",
-      supportItems: ["Ajustes de conteúdo", "Correção de Bugs", "Suporte por WhatsApp"],
-    },
     portfolio: {
       title: "Portfólio",
       subtitle: "Projetos reais com resultados mensuráveis — de clientes contratantes a experimentos próprios.",
@@ -187,7 +154,6 @@ const translations = {
       inicio: "Home",
       sobre: "About",
       servicos: "Services",
-      precos: "Pricing",
       portfolio: "Portfolio",
       contato: "Contact",
       cta: "Request Quote",
@@ -253,38 +219,6 @@ const translations = {
         { icon: "🗄️", title: "Lead & Contact Sync", desc: "Customer form data is saved securely and routed directly to your email or Google Sheets." },
       ],
     },
-    pricing: {
-      title: "Pricing",
-      subtitle: "Modular structure — pay only for what you actually need.",
-      baseBadge: "Base Project",
-      baseSub: "One-time payment — no hidden monthly fees",
-      baseHeader: "// INCLUDED IN BASE PROJECT",
-      baseItems: [
-        "Modern, 100% responsive web interface",
-        "UI/UX design and prototyping",
-        "Database integration",
-        "Google Sheets connection",
-        "Dynamic forms and data collection",
-        "Cloud hosting and deployment",
-        "Custom domain setup",
-        "Speed & SEO optimization",
-      ],
-      extraHeader: "// ADDITIONAL MODULES",
-      modules: [
-        { name: "WhatsApp / Email Notification", brl: 500, icon: "💬", suffix: "" },
-        { name: "5-Day Express Delivery", brl: 500, icon: "⚡", suffix: "" },
-        { name: "Meta / Google Ads Tracking", brl: 250, icon: "📊", suffix: "" },
-        { name: "Extra Pages", brl: 250, icon: "📄", suffix: " / each" },
-      ],
-      supportBadge: "Technical Support",
-      supportTitle: "Post-Delivery",
-      supportSub: "Ongoing support without surprises",
-      perMonth: "/month",
-      monthlySub: "Monthly plan — cancel anytime",
-      perSemi: "/semi-annually",
-      savings: "💚 Save ",
-      supportItems: ["Content updates", "Bug fixes", "WhatsApp support"],
-    },
     portfolio: {
       title: "Portfolio",
       subtitle: "Real projects with measurable results — from client solutions to personal builds.",
@@ -341,12 +275,11 @@ const translations = {
   },
 };
 
-// --- CONTEXTO DE IDIOMA E PREÇOS ---
+// --- CONTEXTO DE IDIOMA ---
 interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: typeof translations["pt"];
-  formatPrice: (brl: number) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -403,7 +336,6 @@ function Header() {
     { label: t.nav.inicio, id: "inicio" },
     { label: t.nav.sobre, id: "sobre" },
     { label: t.nav.servicos, id: "servicos" },
-    { label: t.nav.precos, id: "precos" },
     { label: t.nav.portfolio, id: "portfolio" },
     { label: t.nav.contato, id: "contato" },
   ];
@@ -713,112 +645,6 @@ function ServicesSection() {
   );
 }
 
-function PricingSection() {
-  const { t, formatPrice } = useLanguage();
-
-  return (
-    <section id="precos" style={{ padding: "100px 0", backgroundColor: "#16161A", position: "relative" }}>
-      <div className="section-divider" style={{ position: "absolute", top: 0, left: 0, right: 0 }} />
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-4">
-          <div style={{ width: 3, height: 28, backgroundColor: "#22C55E", borderRadius: 2 }} />
-          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "clamp(1.6rem, 3vw, 2.2rem)", letterSpacing: "-0.02em" }}>
-            {t.pricing.title}
-          </h2>
-        </div>
-        <p style={{ color: "#A7A7A3", marginBottom: 48, lineHeight: 1.7 }}>
-          {t.pricing.subtitle}
-        </p>
-
-        <div className="grid lg:grid-cols-3 gap-6 items-start">
-          <div style={{ gridColumn: "span 2" }}>
-            <div className="glow-card" style={{ backgroundColor: "#1C1C22", borderRadius: 16, overflow: "hidden", border: "1px solid rgba(124,58,237,0.3)", boxShadow: "0 0 0 1px rgba(124,58,237,0.15), 0 4px 40px rgba(0,0,0,0.5)" }}>
-              <div style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(34,197,94,0.08) 100%)", padding: "28px 28px 24px", borderBottom: "1px solid rgba(42,42,50,0.8)" }}>
-                <div className="flex items-start justify-between flex-wrap gap-4">
-                  <div>
-                    <Badge color="purple">{t.pricing.baseBadge}</Badge>
-                    <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "2.6rem", letterSpacing: "-0.03em", marginTop: 8, color: "#FFFFFF" }}>
-                      {formatPrice(1000)}
-                    </div>
-                    <div style={{ color: "#A7A7A3", fontSize: "0.875rem", marginTop: 4 }}>{t.pricing.baseSub}</div>
-                  </div>
-                </div>
-              </div>
-              <div style={{ padding: "24px 28px" }}>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#9D6FEF", marginBottom: 16, letterSpacing: "0.06em" }}>{t.pricing.baseHeader}</div>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {t.pricing.baseItems.map((item) => (
-                    <div key={item} className="flex items-start gap-2">
-                      <span style={{ color: "#22C55E", flexShrink: 0, marginTop: 2 }}>✓</span>
-                      <span style={{ color: "#A7A7A3", fontSize: "0.875rem" }}>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div style={{ marginTop: 20 }}>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#9D6FEF", marginBottom: 12, letterSpacing: "0.06em" }}>{t.pricing.extraHeader}</div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {t.pricing.modules.map(({ name, brl, icon, suffix }) => (
-                  <div key={name} style={{ backgroundColor: "#1C1C22", border: "1px solid rgba(42,42,50,0.8)", borderRadius: 12, padding: "16px 18px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, transition: "all 0.2s", cursor: "default" }}
-                    className="glow-card"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span style={{ fontSize: "1.2rem" }}>{icon}</span>
-                      <span style={{ fontSize: "0.875rem", color: "#A7A7A3", fontFamily: "var(--font-body)" }}>{name}</span>
-                    </div>
-                    <span style={{ color: "#22C55E", fontFamily: "var(--font-mono)", fontWeight: 500, fontSize: "0.85rem", whiteSpace: "nowrap" }}>
-                      +{formatPrice(brl)}{suffix}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="glow-card" style={{ backgroundColor: "#1C1C22", borderRadius: 16, border: "1px solid rgba(34,197,94,0.25)", overflow: "hidden", boxShadow: "0 0 0 1px rgba(34,197,94,0.1), 0 4px 30px rgba(0,0,0,0.5)" }}>
-              <div style={{ background: "linear-gradient(135deg, rgba(34,197,94,0.12) 0%, rgba(11,11,14,0) 100%)", padding: "24px 24px 20px", borderBottom: "1px solid rgba(42,42,50,0.8)" }}>
-                <Badge color="green">{t.pricing.supportBadge}</Badge>
-                <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "1.8rem", marginTop: 10, letterSpacing: "-0.02em" }}>{t.pricing.supportTitle}</div>
-                <div style={{ color: "#A7A7A3", fontSize: "0.8rem", marginTop: 4 }}>{t.pricing.supportSub}</div>
-              </div>
-              <div style={{ padding: "20px 24px" }}>
-                <div className="flex flex-col gap-4">
-                  <div style={{ backgroundColor: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.2)", borderRadius: 10, padding: "16px 18px" }}>
-                    <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "1.3rem", color: "#22C55E" }}>
-                      {formatPrice(100)}<span style={{ fontSize: "0.9rem", color: "#A7A7A3", fontWeight: 400 }}>{t.pricing.perMonth}</span>
-                    </div>
-                    <div style={{ color: "#A7A7A3", fontSize: "0.8rem", marginTop: 4 }}>{t.pricing.monthlySub}</div>
-                  </div>
-                  <div style={{ backgroundColor: "rgba(124,58,237,0.08)", border: "1px solid rgba(124,58,237,0.2)", borderRadius: 10, padding: "16px 18px" }}>
-                    <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "1.3rem", color: "#9D6FEF" }}>
-                      {formatPrice(500)}<span style={{ fontSize: "0.9rem", color: "#A7A7A3", fontWeight: 400 }}>{t.pricing.perSemi}</span>
-                    </div>
-                    <div style={{ color: "#22C55E", fontSize: "0.8rem", marginTop: 4 }}>
-                      {t.pricing.savings}{formatPrice(100)}
-                    </div>
-                  </div>
-                </div>
-                <div style={{ marginTop: 16 }}>
-                  {t.pricing.supportItems.map((item) => (
-                    <div key={item} className="flex items-center gap-2" style={{ marginBottom: 8 }}>
-                      <span style={{ color: "#22C55E", fontSize: "0.8rem" }}>✓</span>
-                      <span style={{ color: "#A7A7A3", fontSize: "0.8rem" }}>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="section-divider" style={{ position: "absolute", bottom: 0, left: 0, right: 0 }} />
-    </section>
-  );
-}
-
 function PortfolioCard({ title, tag, img, desc, link, badgeColor }: { title: string; tag: string; img: string; desc: string; link?: string; badgeColor: "purple" | "green" | "blue" }) {
   const { t } = useLanguage();
   const isLocalImage = img.startsWith("/");
@@ -876,7 +702,8 @@ function PortfolioSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="portfolio" style={{ padding: "100px 0" }}>
+    <section id="portfolio" style={{ padding: "100px 0", position: "relative" }}>
+      <div className="section-divider" style={{ position: "absolute", top: 0, left: 0, right: 0 }} />
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
           <div className="flex items-center gap-3">
@@ -1257,22 +1084,13 @@ function Footer() {
 export default function App() {
   const [lang, setLang] = useState<Language>("pt");
 
-  const formatPrice = (brl: number) => {
-    if (lang === "en") {
-      const usd = Math.round(brl / 5);
-      return `$ ${usd.toLocaleString("en-US")}`;
-    }
-    return `R$ ${brl.toLocaleString("pt-BR")}`;
-  };
-
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t: translations[lang], formatPrice }}>
+    <LanguageContext.Provider value={{ lang, setLang, t: translations[lang] }}>
       <div style={{ backgroundColor: "#0B0B0E", minHeight: "100%" }}>
         <Header />
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <PricingSection />
         <PortfolioSection />
         <ContactSection />
         <Footer />
