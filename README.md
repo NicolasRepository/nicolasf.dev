@@ -1,4 +1,4 @@
-# Site Pessoal — Portfólio + Preços + Captação de Leads
+# Site Pessoal — Portfólio + Captação de Leads
 
 Frontend em React/Vite (Tailwind v4) + backend em Serverless Functions (Vercel) +
 banco de dados PostgreSQL (Neon). Tudo no mesmo repositório, um único deploy na Vercel.
@@ -6,7 +6,7 @@ banco de dados PostgreSQL (Neon). Tudo no mesmo repositório, um único deploy n
 ## Estrutura
 
 ```
-├── src/                  → frontend (landing page, tabela de preços, formulário de contato)
+├── src/                  → frontend (landing page, formulário de contato)
 ├── api/
 │   └── lead.ts           → POST /api/lead — rota que processa o formulário de contato
 ├── lib/
